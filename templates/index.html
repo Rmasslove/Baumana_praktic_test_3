@@ -8,10 +8,34 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Заголовок</h1>
+    <h2>Заголовок</h2>
+    <p>Текст</p>
+    {%if message%}
+    <p>{{message}}</p>
+    {%endif%}
+    <form action="" method="post">
+        <p>
+            <label for="pole1">pole1</label>
+            <input type="number" name="pole1">
+        </p>
+            <p>
+            <label for="pole2">pole2</label>
+            <input type="number" name="pole2">
+        </p>
+            <p>
+            <label for="pole3">pole3</label>
+            <input type="number" name="pole3">
+        </p>
+            <p>
+            <label for="pole4">pole4</label>
+            <input type="number" name="pole4">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
 
-<h1>Заголовок</h1>
-<h2>Заголовок</h2>
-<p>Текст</p>
 
 
 </body>
