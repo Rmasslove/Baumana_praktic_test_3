@@ -8,7 +8,7 @@ def print_hello():
     return render_template('index.html')
 
 
-@app.route('/text/')
+@app.route('/text/')  # Другая страница
 def print_text():
     return "Some text!"
 
