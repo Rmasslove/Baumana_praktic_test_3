@@ -5,39 +5,58 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}"/>
 </head>
 <body>
-    <h1>Итоговая аттестация</h1>
-    <h2>«Прогнозирование размеров сварного шва при электронно-лучевой сварке
-тонкостенных конструкций аэрокосмического назначения»</h2>
-    <h3>Введите значения</h3>
+<div class="containerApp">
+        <header class="header">
+        <h1 class="header__title">Итоговая аттестация</h1>
+    </header>
+    <div class="block_1">
+        <p class="title">«Прогнозирование размеров сварного шва при электронно-лучевой сварке тонкостенных конструкций аэрокосмического назначения»</p>
+    </div>
+    <div class="form">
     {%if message%}
-    <p>{{message}}</p>
+    <p class="message">{{message}}</p>
     {%endif%}
+    <h3>Введите значения</h3>
     <form action="" method="post">
         <p>
             <label for="iw_q">Величина сварочного тока (IW)</label>
-            <input type="number" name="iw_q">
+            <div>
+                <input type="number" min=0  required name="iw_q" id="iw_q">
+            </div>
         </p>
             <p>
             <label for="if_q">Ток фокусировки электронного пучка (IF)</label>
-            <input type="number" name="if_q">
+            <div>
+                <input type="number" min=0  step="0.1" required name="if_q" id="if_q">
+            </div>
         </p>
             <p>
             <label for="vw_q">Скорость сварки (VW)</label>
-            <input type="number" name="vw_q">
+            <div>
+                <input type="number" min=0  step="0.1" required name="vw_q" id="vw_q">
+            </div>
         </p>
             <p>
             <label for="fp_q">Расстояние от поверхности образцов до электронно-оптической системы (FP)</label>
-            <input type="number" name="fp_q">
+            <div>
+                <input type="number" min=0  step="0.1" required name="fp_q" id="fp_q">
+            </div>
         </p>
         <p>
-            <input type="submit">
+            <input class="button" type="submit">
         </p>
     </form>
-
-
-
+    </div>
+    <footer class="footer">
+      <div class="footer-wr">
+        <h3><a class="target" target="_blank" href="https://github.com/Rmasslove/Baumana_praktic_test_3">Rmasslove 2023</a></h3>
+      </div>
+    </footer>
+</div>
 </body>
 </html>
