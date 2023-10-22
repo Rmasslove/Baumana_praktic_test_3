@@ -8,27 +8,28 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Заголовок</h1>
-    <h2>Заголовок</h2>
-    <p>Текст</p>
+    <h1>Итоговая аттестация</h1>
+    <h2>«Прогнозирование размеров сварного шва при электронно-лучевой сварке
+тонкостенных конструкций аэрокосмического назначения»</h2>
+    <h3>Введите значения</h3>
     {%if message%}
     <p>{{message}}</p>
     {%endif%}
     <form action="" method="post">
         <p>
-            <label for="iw_q">IW</label>
+            <label for="iw_q">Величина сварочного тока (IW)</label>
             <input type="number" name="iw_q">
         </p>
             <p>
-            <label for="if_q">IF</label>
+            <label for="if_q">Ток фокусировки электронного пучка (IF)</label>
             <input type="number" name="if_q">
         </p>
             <p>
-            <label for="vw_q">VW</label>
+            <label for="vw_q">Скорость сварки (VW)</label>
             <input type="number" name="vw_q">
         </p>
             <p>
-            <label for="fp_q">FP</label>
+            <label for="fp_q">Расстояние от поверхности образцов до электронно-оптической системы (FP)</label>
             <input type="number" name="fp_q">
         </p>
         <p>

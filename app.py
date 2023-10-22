@@ -27,9 +27,14 @@ def predict():
         pr_sc = scaler.transform(request_on_predict)
         pred = loaded_model.predict(pr_sc)
 
-        message = f'Depth и Width {pred[0][1], pred[0][0]}'
+        message = f'Глубина шва (Depth) {pred[0][1]} и Ширина шва (Width) {pred[0][0]}'
 
-        print(iw_q, if_q, vw_q, fp_q, pred, pr_sc, scaler)
+        print(f'Величина сварочного тока (IW) {iw_q}')
+        print(f'Ток фокусировки электронного пучка (IF) {if_q}')
+        print(f'Скорость сварки (VW) {vw_q}')
+        print(f'Расстояние от поверхности образцов до электронно-оптической системы (FP) {fp_q}')
+        print(f'Глубина шва (Depth) {pred[0][1]} и Ширина шва (Width) {pred[0][0]}')
+
 
     return render_template('index.html', message=message)
 
