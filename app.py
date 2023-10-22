@@ -34,4 +34,4 @@ def predict():
     return render_template('index.html', message=message)
 
 
-app.run()  # Закоментировать перед развёртыванием на сайте.
+# app.run()  # Закоментировать перед развёртыванием на сайте.
